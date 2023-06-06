@@ -41,4 +41,9 @@ public class BookController {
             );
         });
     }
+
+    @PostMapping("")
+    public void addBook(@RequestBody Book book) {
+        bookService.add(book);
+    }
     }
