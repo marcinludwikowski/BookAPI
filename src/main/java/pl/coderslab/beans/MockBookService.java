@@ -36,6 +36,14 @@ public class MockBookService implements BookService {
         books.add(book);
     }
 
+    @Override
+    public void update(Book book) {
+        if (this.get(book.getId()).isPresent()) {
+            int indexOf = books.indexOf(this.get(book.getId()).get());
+            books.set(indexOf, book);
+        }
+    }
+
     public void setBooks(List<Book> books) {
         this.books = books;
     }

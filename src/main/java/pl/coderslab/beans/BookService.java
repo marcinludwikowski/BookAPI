@@ -10,4 +10,6 @@ public interface BookService {
     Optional<Book> get(Long id);
 
     void add(Book book);
+
+    void update(Book book);
 }
